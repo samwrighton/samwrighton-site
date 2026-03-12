@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What running five leadership functions taught me | Sam Wrighton</title>
+    <meta name="description" content="When three senior roles became vacant in quick succession, we redesigned how the work gets done. Here is what I learned.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #002147;
+            --text: #e8ecf0;
+            --text-bright: #ffffff;
+            --text-muted: #8fa4b8;
+            --accent: #6db3f2;
+            --accent-hover: #a0cff7;
+            --border: rgba(255, 255, 255, 0.08);
+            --max-width: 680px;
+            --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+            --font-serif: 'IBM Plex Serif', Georgia, serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 17px; }
+        body { font-family: var(--font-body); color: var(--text); background: var(--bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 33, 71, 0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); z-index: 100; padding: 0 1.5rem; }
+        nav .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+        nav .name { font-family: var(--font-serif); font-weight: 600; font-size: 0.95rem; letter-spacing: -0.01em; color: var(--text-bright); text-decoration: none; }
+        nav .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+        nav .nav-links a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
+        nav .nav-links a:hover { color: var(--text-bright); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+        .hamburger span { display: block; width: 20px; height: 2px; background: var(--text); margin: 4px 0; transition: 0.3s; }
+
+        main { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        footer { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.5rem 3rem; border-top: 1px solid var(--border); }
+        footer p { font-size: 0.75rem; color: var(--text-muted); }
+
+        .article-body { padding-top: 7rem; padding-bottom: 3rem; }
+        .article-body .back-link { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; font-weight: 500; margin-bottom: 2rem; display: inline-block; letter-spacing: 0.02em; transition: color 0.2s; }
+        .article-body .back-link:hover { color: var(--text-bright); }
+        .article-body h1 { font-family: var(--font-serif); font-weight: 600; font-size: 2.1rem; line-height: 1.25; margin-bottom: 0.75rem; letter-spacing: -0.025em; color: var(--text-bright); }
+        .article-body .article-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; }
+        .article-body p { margin-bottom: 1.25rem; line-height: 1.8; font-size: 0.93rem; color: var(--text); }
+        .article-body h2 { font-family: var(--font-serif); font-weight: 500; font-size: 1.35rem; margin-top: 2.5rem; margin-bottom: 0.75rem; line-height: 1.35; letter-spacing: -0.015em; color: var(--text-bright); }
+
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+            .article-body h1 { font-size: 1.7rem; }
+            .hamburger { display: block; }
+            nav .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: rgba(0, 33, 71, 0.98); backdrop-filter: blur(14px); flex-direction: column; padding: 1rem 1.5rem 1.5rem; gap: 1rem; border-bottom: 1px solid var(--border); }
+            nav .nav-links.open { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../index.html" class="name">Sam Wrighton</a>
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#writing">Writing</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <article class="article-body">
+
+        <a href="../index.html#writing" class="back-link">&larr; Back to all writing</a>
+
+        <h1>What running five leadership functions as one person taught me</h1>
+        <div class="article-meta">March 2026</div>
+
+        <p>
+            Within my first year at a small international development company, three senior roles became vacant in quick succession. The organisation had around 30 employees and was at an early stage of its growth. Hiring three replacements was not realistic given the budget constraints, and the sector itself was under significant pressure. So instead of replacing those roles, I absorbed them. Business development, operations, logistics, compliance, and HR all became my responsibility. I was later promoted to COO, which formalised what had already been happening in practice.
+        </p>
+
+        <p>
+            Over the following period, profit margins doubled. We achieved ISO 27001 and ISO 9001 certification with zero non-conformances. And I learned things about leadership, AI, and organisational design that I would not have learned any other way. This is what I took away from the experience.
+        </p>
+
+        <h2>The opportunity in a vacancy</h2>
+
+        <p>
+            When a senior role becomes vacant, the instinct is to replace it like-for-like. Write the same job description, hire someone similar, carry on as before. But a vacancy is also an opportunity to ask a more fundamental question: does this work need to be done in the same way, by the same kind of role, or at all?
+        </p>
+
+        <p>
+            In our case, the answer was that much of the work could be redesigned. Some of it needed to be done more systematically than it had been. Some of it could be automated. And some of it could be consolidated under a single operational leader with the right tools and the willingness to learn quickly. That is what I set out to do.
+        </p>
+
+        <h2>Building the operational foundations</h2>
+
+        <p>
+            The most intensive piece of work was compliance. I built a centralised documentation framework: a single document register, a consistent naming convention, and a clear ownership structure for every policy. I worked through the entire body of documentation methodically, consolidated it into a single source of truth, and made sure everything was current and internally consistent. The result was that we passed both our ISO 27001 and ISO 9001 audits with zero comments and zero non-conformances. That was not the product of luck. It was the product of months of methodical, unglamorous work.
+        </p>
+
+        <p>
+            The same approach applied across the other functions. For each area I absorbed, the pattern was similar: understand what actually needs to happen, design a system that makes it repeatable, build the tools to support it, and document everything so that it does not depend on any single person's memory.
+        </p>
+
+        <h2>Where AI actually made a difference</h2>
+
+        <p>
+            I used AI extensively throughout this period. But not in the way most people talk about AI at work. I was not using it to write emails faster or summarise documents. I was using it as a development platform to build bespoke internal tools.
+        </p>
+
+        <p>
+            The clearest example is our performance review process. I rebuilt it using Google Apps Script, Google Forms, and Sheets, with the scripts themselves largely written through prompted conversations with AI. The new system automated the collection, aggregation, and reporting of performance data. The total time saving was approximately 200 hours per cycle. A year earlier, I would not have believed that building custom internal tools was something within my reach. I do not have a background in software development. AI made it possible, and it made it essentially free.
+        </p>
+
+        <p>
+            I applied the same approach to our company website, which needed a complete rebuild. Rather than hiring an external web designer, I built it myself using AI-assisted development. The saving was approximately &pound;35,000 in fees that would have otherwise gone to an external agency.
+        </p>
+
+        <p>
+            This pattern repeated itself across multiple areas of the business. The lesson that surprised me most was that AI's most underrated capability is not content generation. It is enabling non-technical people to build functional software. For a small organisation that cannot afford dedicated developers, that changes what is possible in a fundamental way.
+        </p>
+
+        <h2>What I got wrong</h2>
+
+        <p>
+            The biggest mistake I made was around communication. When people see senior roles being absorbed rather than replaced, and when they see the COO actively reducing costs and automating processes, the natural conclusion is that more changes might follow. That concern was entirely understandable.
+        </p>
+
+        <p>
+            The reality was that the cost savings were making the business more financially resilient and stable. We were not cutting to shrink. We were reducing overhead so that the organisation could grow sustainably in a sector under genuine pressure. But I did not make that case clearly enough, early enough, and it caused unnecessary anxiety that could have been avoided with better communication. If I were doing it again, I would get ahead of that narrative from the very beginning.
+        </p>
+
+        <h2>What I would tell someone in the same position</h2>
+
+        <p>
+            First, do not assume you need to replace every departing role like-for-like. A vacancy is a chance to rethink how the work is structured. Take it.
+        </p>
+
+        <p>
+            Second, take AI seriously as a building tool. The ability to create custom internal software through prompted conversation is genuinely transformative for small organisations. If you are running operations in a company of 20 to 50 people, this capability is worth investing time in learning.
+        </p>
+
+        <p>
+            Third, do the unglamorous work. Compliance, documentation, naming conventions, process mapping. None of it is exciting. All of it matters. The organisations that struggle tend to struggle not because of a single dramatic failure but because the operational foundations were never properly built.
+        </p>
+
+        <p>
+            And finally, communicate the why. If you are making changes that affect how people experience their working lives, they deserve to understand the reasoning. Cost savings and automation are not inherently threatening, but they feel threatening when nobody explains what they are for. I learned that the hard way. I would not make the same mistake again.
+        </p>
+
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Sam Wrighton</p>
+</footer>
+
+</body>
+</html>
