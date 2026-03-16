@@ -517,7 +517,7 @@ function animateCounter(target, duration) {
 const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateCounter(102, 2000);
+            animateCounter(106, 2000);
             counterObserver.unobserve(entry.target);
         }
     });
@@ -540,7 +540,7 @@ const visited = [
     "COL","ECU","PER","BOL","BRA","ARG","CHL","URY","PRY","CUB",
     "BHS","BRB","GRD","ATG","LCA",
     "MAR","ZAF","KEN","TZA","TUN",
-    "TUR","GEO","ISR","JOR","ARE","LBN","PSE",
+    "TUR","GEO","ISR","JOR","ARE","LBN","PSE","ARM","AZE",
     "IND","LKA","NPL","BGD","THA","VNM","KHM","LAO","MMR","MYS",
     "SGP","IDN","PHL",
     "JPN","KOR","CHN","MNG","TWN","HKG",
