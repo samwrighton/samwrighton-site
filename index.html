@@ -64,6 +64,7 @@
         section:first-of-type { padding-top: 8rem; }
         .divider { border: none; border-top: 1px solid var(--rule); margin: 0; }
 
+        /* HERO */
         .hero-top { display: flex; align-items: flex-start; gap: 2.5rem; margin-bottom: 2rem; }
         .hero-photo {
             width: 140px; min-width: 140px; height: 140px;
@@ -92,6 +93,7 @@
         }
         .hero .links-row a:hover { color: var(--text-muted); }
 
+        /* SECTION TITLES */
         .section-label {
             font-family: var(--font-body); font-size: 0.62rem; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 1.25rem;
@@ -105,16 +107,21 @@
             line-height: 1.85; margin-bottom: 1.35rem;
         }
 
+        /* SKILLS GRID */
         .skills-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem;
         }
         .skill-card {
             padding: 1.5rem;
             border: 1px solid var(--rule);
-            border-left: 3px solid var(--gold);
+            border-radius: 0;
             transition: border-color 0.3s;
         }
-        .skill-card:hover { border-color: var(--accent-border); border-left-color: var(--accent); }
+        .skill-card:hover { border-color: var(--accent-border); }
+        .skill-card .skill-icon {
+            font-family: var(--font-display); font-size: 1.6rem; font-weight: 600;
+            color: var(--gold); margin-bottom: 0.75rem; line-height: 1;
+        }
         .skill-card h3 {
             font-family: var(--font-body); font-size: 0.78rem; font-weight: 600;
             color: var(--ink); letter-spacing: 0.08em; text-transform: uppercase;
@@ -124,6 +131,7 @@
             font-size: 0.82rem; font-weight: 300; color: var(--text-muted); line-height: 1.7;
         }
 
+        /* ARTICLES */
         .articles-list { margin-top: 2rem; }
         .article-item { padding: 1.75rem 0; border-bottom: 1px solid var(--rule); }
         .article-item:first-child { padding-top: 0; }
@@ -137,6 +145,7 @@
         .article-item h3 a:hover { color: var(--text-muted); }
         .article-item .excerpt { font-size: 0.85rem; font-weight: 300; color: var(--text-muted); line-height: 1.7; }
 
+        /* CONTACT FORM */
         .contact-content p {
             font-size: 0.9rem; font-weight: 300; color: var(--ink-light);
             margin-bottom: 1.75rem; line-height: 1.8;
@@ -166,7 +175,9 @@
             outline: none; transition: border-color 0.3s;
         }
         .form-group input:focus,
-        .form-group textarea:focus { border-color: var(--accent); }
+        .form-group textarea:focus {
+            border-color: var(--accent);
+        }
         .form-group textarea { resize: vertical; min-height: 120px; }
         .form-submit {
             font-family: var(--font-body); font-size: 0.75rem; font-weight: 500;
@@ -177,15 +188,18 @@
         }
         .form-submit:hover { background: var(--ink-light); }
         .form-note {
-            font-size: 0.72rem; font-weight: 400; color: var(--text-muted); margin-top: 1rem;
+            font-size: 0.72rem; font-weight: 400; color: var(--text-muted);
+            margin-top: 1rem;
         }
 
+        /* FOOTER */
         footer {
             max-width: var(--max-width); margin: 0 auto;
             padding: 2.5rem 2rem 3.5rem; border-top: 1px solid var(--rule);
         }
         footer p { font-size: 0.68rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.08em; }
 
+        /* MOBILE */
         @media (max-width: 600px) {
             html { font-size: 16px; }
             main { padding: 0 1.5rem; }
@@ -227,6 +241,7 @@
 
 <main>
 
+    <!-- HERO -->
     <section id="about" class="hero">
         <div class="hero-top">
             <img src="photo.jpg" alt="Sam Wrighton" class="hero-photo">
@@ -242,4 +257,166 @@
             <span class="credential-tag">COO</span>
             <span class="credential-tag">Business Development</span>
             <span class="credential-tag">Operations &amp; Scaling</span>
-            <span class="credential-tag">Government &amp; Security-Sens
+            <span class="credential-tag">Government &amp; Security-Sensitive Environments</span>
+        </div>
+        <div class="links-row">
+            <a href="https://www.linkedin.com/in/sam-wrighton/" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+            <a href="sam-wrighton-cv.pdf" target="_blank">Download CV &rarr;</a>
+            <a href="#contact">Get in touch &rarr;</a>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ABOUT -->
+    <section>
+        <p class="section-label">Background</p>
+        <h2>About me</h2>
+        <div class="about-text">
+            <p>
+                I have built my career at the intersection of research, strategy, and operational delivery. After completing an ESRC-funded DPhil in International Relations at the University of Oxford (St Cross College), I moved into the private sector, progressing through research, business development, and senior leadership roles across three organisations in seven years.
+            </p>
+            <p>
+                My academic work focused on migration, geopolitics, and inter-state relations. My professional work has taken me into operational leadership and business development, where I focus on building and scaling infrastructure in resource-constrained environments. I have particular experience in restructuring teams and workflows to achieve more with less, including the practical integration of AI tools into day-to-day operations. I have worked in government and security-sensitive contexts throughout my career.
+            </p>
+            <p>
+                I am interested in how organisations can build resilient operational foundations during periods of rapid change, and I write about these topics below.
+            </p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <p class="section-label">Expertise</p>
+        <h2>What I bring</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">I</div>
+                <h3>Operational Scaling</h3>
+                <p>Building operational infrastructure for growing organisations. Consolidating leadership functions, designing repeatable systems, and making small teams perform like much larger ones.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">II</div>
+                <h3>Business Development</h3>
+                <p>End-to-end bid management, public procurement, and framework agreements. A track record of doubling revenue and winning contracts with UN agencies, FCDO, EU institutions, and international NGOs.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">III</div>
+                <h3>AI-Enabled Operations</h3>
+                <p>Practical integration of AI tools into operational workflows. Building bespoke internal software through AI-assisted development, eliminating manual processes, and reducing costs without reducing quality.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">IV</div>
+                <h3>Compliance &amp; Quality</h3>
+                <p>ISO 9001 and ISO 27001 certification with zero non-conformances. Building documentation frameworks, quality assurance processes, and compliance systems from scratch.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">V</div>
+                <h3>International Expansion</h3>
+                <p>Established European subsidiaries for two organisations, managing legal incorporation, financial systems, and organisational structure across jurisdictions.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">VI</div>
+                <h3>Team Leadership</h3>
+                <p>Managing teams of up to 24 people across research, business development, and operations. Recruitment, performance management, and building organisational culture in resource-constrained environments.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- BEYOND WORK -->
+    <section>
+        <p class="section-label">Beyond work</p>
+        <h2>A bit more about me</h2>
+        <div class="about-text">
+            <p>
+                I have visited 106 countries and counting. Travel has shaped how I think about organisations, systems, and the ways different cultures solve the same operational problems in completely different ways.
+            </p>
+            <p>
+                Away from work, I am a keen cricketer and sailor, and I spend my winters skiing whenever I can. I am a football season ticket holder and follow England rugby home and away. Sport has taught me more about leadership, resilience, and team dynamics than any management book.
+            </p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- WRITING -->
+    <section id="writing">
+        <p class="section-label">Writing</p>
+        <h2>Thinking and practice</h2>
+
+        <div class="articles-list">
+
+            <div class="article-item">
+                <div class="article-date">March 2026</div>
+                <h3><a href="articles/what-running-five-functions-taught-me.html">What running five leadership functions as one person taught me</a></h3>
+                <p class="excerpt">When three senior roles became vacant in quick succession, we had a choice: hire replacements or redesign how the work gets done. We chose the latter. Here is what I learned.</p>
+            </div>
+
+            <div class="article-item">
+                <div class="article-date">Coming soon</div>
+                <h3><a href="#">How I used AI to restructure a small company's operations</a></h3>
+                <p class="excerpt">A practical account of which tools made a real difference, which were overhyped, and how to think about AI integration when you are resource-constrained.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <p class="section-label">Contact</p>
+        <h2>Get in touch</h2>
+        <div class="contact-content">
+            <p>
+                Open to conversations about operational leadership, business development, and how organisations can build stronger internal systems. Whether you have a specific opportunity in mind or just want to connect, I would be glad to hear from you.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:samwrighton@me.com" class="contact-link">samwrighton@me.com</a>
+                <a href="https://www.linkedin.com/in/sam-wrighton/" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <!-- To make this form work, sign up at formspree.io (free), create a form,
+             and replace YOUR_FORMSPREE_ID below with your actual form ID -->
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xojkkrka" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send message &rarr;</button>
+            </form>
+            <p class="form-note">Your message goes directly to my inbox. I aim to respond within 48 hours.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Sam Wrighton</p>
+</footer>
+
+</body>
+</html>
