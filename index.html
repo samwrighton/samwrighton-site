@@ -58,12 +58,13 @@
         }
 
         nav .name {
-            font-family: var(--font-display);
-            font-weight: 600;
-            font-size: 1.15rem;
-            color: var(--ink);
             text-decoration: none;
-            letter-spacing: 0.01em;
+            display: flex;
+            align-items: center;
+        }
+
+        nav .name img {
+            height: 44px;
         }
 
         nav .nav-links {
@@ -122,7 +123,6 @@
             margin: 0;
         }
 
-        /* HERO WITH PHOTO */
         .hero-top {
             display: flex;
             align-items: flex-start;
@@ -335,6 +335,8 @@
 
             .hero .links-row {
                 justify-content: center;
+                flex-wrap: wrap;
+                gap: 1.25rem;
             }
 
             .hamburger { display: block; }
@@ -360,7 +362,7 @@
 
 <nav>
     <div class="nav-inner">
-<a href="#" class="name"><img src="sam-wrighton-logo-nav.svg" alt="Sam Wrighton" style="height: 44px;"></a>
+        <a href="#" class="name"><img src="sam-wrighton-logo-nav.svg" alt="Sam Wrighton"></a>
         <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -412,6 +414,21 @@
             </p>
             <p>
                 I am interested in how organisations can build resilient operational foundations during periods of rapid change, and I write about these topics below.
+            </p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+        <p class="section-label">Beyond work</p>
+        <h2>A bit more about me</h2>
+        <div class="about-text">
+            <p>
+                I have visited 106 countries and counting. Travel has shaped how I think about organisations, systems, and the ways different cultures solve the same operational problems in completely different ways.
+            </p>
+            <p>
+                Away from work, I am a keen cricketer and sailor, and I spend my winters skiing whenever I can. I am a football season ticket holder and follow England rugby home and away. Sport has taught me more about leadership, resilience, and team dynamics than any management book.
             </p>
         </div>
     </section>
