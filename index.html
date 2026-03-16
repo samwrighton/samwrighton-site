@@ -477,10 +477,19 @@
     <p>&copy; 2026 Sam Wrighton</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script>
-// Scroll animations
+// Load libraries then initialize
+function loadScript(src) {
+    return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+    });
+}
+
+// Scroll animations (no dependencies)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -491,7 +500,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Animated counter
+// Animated counter (no dependencies)
 function animateCounter(target, duration) {
     const el = document.getElementById('country-count');
     let start = 0;
@@ -516,7 +525,11 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counterObserver.observe(document.getElementById('country-count'));
 
-// World map
+// Load D3 and TopoJSON, then build map
+Promise.all([
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js'),
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js')
+]).then(() => {
 const visited = [
     "GBR","IRL","ISL","FRA","ESP","PRT","ITA","DEU","NLD","BEL",
     "LUX","CHE","AUT","CZE","POL","DNK","SWE","NOR","FIN","EST",
@@ -583,6 +596,7 @@ fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
                 document.getElementById('map-tooltip').style.opacity = '0';
             });
     });
+}).catch(err => console.error('Failed to load map libraries:', err));
 </script>
 
 </body>
