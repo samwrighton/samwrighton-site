@@ -1,0 +1,9 @@
+{
+  // Static site served from Cloudflare Workers static assets.
+  // The name must match the Worker in the Cloudflare dashboard.
+  "name": "samwrighton-site",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "."
+  }
+}
